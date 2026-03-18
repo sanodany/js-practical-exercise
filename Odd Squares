@@ -1,0 +1,11 @@
+function oddSquares(array){
+    const numSquared=[]
+    for(i=0;i<array.length;i++){
+        const value = array[i]
+        if(value%2 !== 0){
+            numSquared.push(value*value)
+        }
+    }
+    return numSquared
+}
+console.log(oddSquares([10, 15, 20, 25, 30]))
