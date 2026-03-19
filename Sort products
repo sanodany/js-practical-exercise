@@ -1,0 +1,14 @@
+const array = [{
+    name : 'Basketball',
+    price: 567
+},{
+    name:'Tshirt',
+    price:234
+}]
+function sortProducts(array){
+    array.sort((a,b)=>
+        a.price-b.price
+    )
+    return array
+}
+console.log(sortProducts(array))
