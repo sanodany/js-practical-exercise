@@ -1,0 +1,14 @@
+function feast(beast, dish){
+           let value1 = dish[0]
+           let value2 = dish[dish.length -1]
+        
+        let letter1 = beast[0]
+        let letter2 = beast[beast.length -1] 
+    
+    if (letter1 === value1 && letter2 === value2){
+        return true
+    }else {
+        return false
+    }
+}
+console.log(feast('chickadee','chocolate cake'))
