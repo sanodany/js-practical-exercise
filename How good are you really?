@@ -1,0 +1,15 @@
+function betterThanAverage(classPoints,yourPoints){
+    let sum = 0;
+    let average = 0;
+    for(i=0;i<classPoints.length;i++){
+        let value = classPoints[i]
+        sum += value
+    }
+    average = (sum + yourPoints) / (classPoints.length + 1)
+    if(average < yourPoints){
+        return true
+    } else if (average > yourPoints || average === yourPoints){
+        return false
+    }
+}
+console.log(betterThanAverage([20,20,20],20))
