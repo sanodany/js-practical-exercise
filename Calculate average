@@ -1,0 +1,15 @@
+function findAverage(array) {
+    let sum = 0;
+    let average = 0;
+  for(i=0;i<array.length;i++){
+      let value = array[i]
+      sum += value
+      average = sum / array.length
+  }
+  if(array === []){
+  return 0
+  } else {
+    return average
+  }
+}
+console.log(findAverage([12,13,14]))
