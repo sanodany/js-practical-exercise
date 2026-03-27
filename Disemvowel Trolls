@@ -1,0 +1,13 @@
+function disemvowel(str) {
+    let str1=""
+    for(i=0;i<str.length;i++){
+        let value = str[i]
+        if(value === 'a' || value === 'e' || value === 'i' || value === 'u'|| value === 'o' || value === 'A'|| value === 'E' || value === "I"|| value === "U" || value === "O"){
+            continue;
+        } else {
+            str1 += value
+        }
+    }
+  return str1;
+}
+console.log(disemvowel("This website is for losers LOL!"))
