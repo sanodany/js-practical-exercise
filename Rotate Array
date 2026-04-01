@@ -1,0 +1,6 @@
+function rotate(array, n) {
+    if (!array.length) return [];
+    
+    let offset = n % array.length;
+    return [...array.slice(-offset), ...array.slice(0, -offset)];
+}
