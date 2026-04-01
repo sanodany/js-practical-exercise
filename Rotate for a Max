@@ -1,0 +1,11 @@
+function maxRot(n) {
+    let s = n.toString();
+    let rotations = [n];
+
+    for (let i = 0; i < s.length - 1; i++) {
+        s = s.slice(0, i) + s.slice(i + 1) + s.charAt(i);
+        rotations.push(Number(s));
+    }
+
+    return Math.max(...rotations);
+}
