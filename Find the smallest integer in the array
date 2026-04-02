@@ -1,0 +1,11 @@
+function findSmallestInt(arr) {
+     let previousNum = arr[0]
+  for(i=0;i<arr.length;i++){
+      let value = arr[i]
+      if(value < previousNum){
+         previousNum = value
+     }
+  }
+  return previousNum
+}
+console.log(findSmallestInt([78,56,232,12,8])) 
