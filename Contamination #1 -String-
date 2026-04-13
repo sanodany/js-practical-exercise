@@ -1,0 +1,15 @@
+function contamination(text, char){
+  // Code here ;)
+  let text1 = '';
+  if(text === '' || char === ''){
+      return text1
+  } else {
+  for (i=0; i<text.length;i++){
+      let value = text[i];
+      value = char;
+      text1 += value
+  }
+  }
+  return text1
+}
+console.log(contamination('Dany', 'D'))
