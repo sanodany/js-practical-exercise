@@ -1,0 +1,21 @@
+const sumf = function(num) {    
+  let sum = num + 1;
+  return sum;
+};
+
+const multif = function(sum) {
+  let mult = sum * 30;
+  return mult;
+};
+
+const fs = [sumf, multif];
+
+function chain(input, fs) {
+  let result = input;
+  for (let i = 0; i < fs.length; i++) {
+    result = fs[i](result);
+  }
+  return result;
+}
+
+console.log(chain(2, fs));
