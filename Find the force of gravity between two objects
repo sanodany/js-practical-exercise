@@ -1,0 +1,29 @@
+let solution = (arr_val, arr_unit) => {
+
+  let m1 = arr_val[0];
+  let m2 = arr_val[1];
+  let r  = arr_val[2];
+
+
+  if (arr_unit[0] === 'lb') m1 *= 0.453592;
+  if (arr_unit[0] === 'g')  m1 *= 0.001;
+  if (arr_unit[0] === 'mg') m1 *= 1e-6;
+  if (arr_unit[0] === 'μg') m1 *= 1e-9;
+  
+  if (arr_unit[1] === 'lb') m2 *= 0.453592;
+  if (arr_unit[1] === 'g')  m2 *= 0.001;
+  if (arr_unit[1] === 'mg') m2 *= 1e-6;
+  if (arr_unit[1] === 'μg') m2 *= 1e-9;
+
+  
+  if (arr_unit[2] === 'ft') r *= 0.3048;
+  if (arr_unit[2] === 'cm') r *= 0.01;
+  if (arr_unit[2] === 'mm') r *= 0.001;
+  if (arr_unit[2] === 'μm') r *= 1e-6;
+
+  const G = 6.67e-11;
+
+  const F = (G * m1 * m2) / (r ** 2);
+
+  return F;
+};
