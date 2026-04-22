@@ -1,0 +1,6 @@
+function rowSumOddNumbers(n) {
+	// TODO
+let sum = n ** 3;
+return sum
+}
+console.log(rowSumOddNumbers(4))
