@@ -1,0 +1,13 @@
+var capitals = function (word) {
+	// Write your code here
+	let alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+	let indices = []
+	for (let i=0;i<word.length;i++){
+	    let value = word[i]
+	    if(alphabets.includes(value)){
+	        indices.push(i)
+	    }
+	}
+	return indices
+};
+console.log(capitals("CodEWaRs"))
