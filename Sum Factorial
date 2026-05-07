@@ -1,0 +1,19 @@
+function sumFactorial(arr){
+    const sumArray = [];
+    let factorial = 0;
+    let sum=0;
+    for(let i=0;i<arr.length;i++){
+        let value = arr[i];
+        factorial = 1;
+        for(let j=value;j>0;j--){
+            factorial *= j;
+        }
+        sumArray.push(factorial)
+    }
+    for(let i=0;i<sumArray.length;i++){
+       let value1= sumArray[i];
+       sum += value1;
+    }
+    return sum
+}
+console.log(sumFactorial([4,6]))
