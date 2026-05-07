@@ -1,0 +1,17 @@
+function validatePIN (pin) {
+    const nums = ['1','2','3','4','5','6','7','8','9','0'];
+    let isValid=[];
+    for(let i=0;i<=pin.length;i++){
+        let value = pin[i];
+        if((pin.length ===4 || pin.length === 6) && nums.includes(value)){
+            isValid.push(value)
+        }
+    }
+    if(isValid.length === pin.length){
+        return true
+    }else{
+        return false
+    }
+  //return true or false
+}
+console.log(validatePIN('123567'))
