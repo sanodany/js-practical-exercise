@@ -1,0 +1,31 @@
+/*
+You are given an array of unique integers that should contain every number from 1 to n — but exactly one number is missing. Write a function findMissing(arr) that finds and returns the missing number. The array will not always be sorted. Find the missing numb
+
+findMissing([1, 2, 4, 5, 6]);
+// → 3
+
+findMissing([3, 1, 4, 5, 2, 7, 6]);
+// → 8  (1 through 8, missing 8)
+
+findMissing([2, 3, 4, 5]);
+// → 1
+
+findMissing([1]);
+// → 2
+
+
+Constraints:
+
+The array will always have exactly one missing number
+Do not sort the array to solve it
+Do not use indexOf or includes in a loop
+*/
+function findMissing(arr){
+ let n = 1 + arr.length
+ let expectedSum = ((n*(n+1))/2)
+ let arrSum = arr.reduce((sum,num)=>{
+     return sum + num
+ },0)
+ return expectedSum - arrSum
+}
+console.log(findMissing([1, 2, 4, 5, 6]))
