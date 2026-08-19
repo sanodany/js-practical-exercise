@@ -1,0 +1,17 @@
+function dnaStrand(dna){
+  let result=""
+  for(i=0;i<dna.length;i++){
+    let value = dna[i]
+    if(value === 'A'){
+        result += 'T'
+    }else if(value === 'T'){
+        result += 'A'
+    } else if(value === 'G'){
+        result += 'C'
+    }if(value === 'C'){
+        result += 'G'
+    }
+  }
+  return result
+}
+console.log(dnaStrand("TAACG"))
